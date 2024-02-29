@@ -1,22 +1,12 @@
 pipeline {
-  agent none
-  stages {
-    stage('pull') {
-      agent {
-        docker { image 'docker:latest' }
-      }
-      steps {
-        sh 'docker --version'
-        sh 'cat /etc/os-release'
-      }
+    agent {
+        docker { image 'node:20.11.1-alpine3.19' }
     }
-    stage ('ubuntu'){
-        agent {
-            docker { image 'ubuntu:latest' }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-    steps {
-        sh 'cat /etc/os_release'
-    }
-    }
-  }
 }
