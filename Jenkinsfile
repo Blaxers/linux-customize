@@ -5,6 +5,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'apt update'
+                sh 'apt install bash'
                 sh 'ls -lah'
                 sh 'cat /etc/os-release'
                 bash './main.sh'
