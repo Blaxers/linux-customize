@@ -7,6 +7,7 @@ pipeline {
             steps {
                 bash 'cat /etc/os-release'
                 bash './main.sh'
+                bash 'whoami'
             }
         }
     }
