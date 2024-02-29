@@ -7,7 +7,7 @@ main(){
   echo "creating copy ${PWD}/../copy"
   mkdir ${PWD}/../copy
   check_config ".bashrc"
-  check_config ".bashrc_aliases"
+  check_config ".bash_aliases"
   fi
 }
 copy_item(){

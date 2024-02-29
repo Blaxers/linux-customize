@@ -13,3 +13,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #Custom
 alias d='docker'
 alias dcr='docker-compose down && docker-compose up -d && docker logs -f $(docker ps --format '{{.ID}}' | head -1)'
+alias dtag="docker tag ${1} ${2} && docker push $2"
