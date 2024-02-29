@@ -8,7 +8,7 @@ pipeline {
                 sh 'free --version'
                 sh 'hostname -I'
 //                 sh 'top'
-                sh 'awk --help'
+                sh 'awk -W -version'
                 sh 'df --version'
             }
         }
