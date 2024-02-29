@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'ubuntu:latest' }
+        docker { image 'ubuntu:20.04' }
     }
     stages {
         stage('Test') {
