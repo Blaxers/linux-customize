@@ -5,12 +5,12 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'apt update'
-                sh 'apt install bash'
-                sh 'ls -lah'
-                sh 'cat /etc/os-release'
-                bash './main.sh'
-                bash 'whoami'
+                sh 'free --version'
+                sh 'ip --help'
+                sh 'top --help'
+                sh 'awk --help'
+                sh 'df --version'
+
             }
         }
     }
