@@ -6,7 +6,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'free --version'
-                sh 'ip -V'
+                sh 'hostname -I'
                 sh 'top --help'
                 sh 'awk --help'
                 sh 'df --version'
