@@ -1,28 +1,30 @@
 #!/bin/bash
 
 main(){
-  if [ -d ${PWD}/../copy ]; then
-  echo "copy ${PWD}/../copy exists"
+  if [ -d ${PWD}/copy ]; then
+  echo "copy ${PWD}/copy exists"
   else
-  echo "creating copy ${PWD}/../copy"
-  mkdir ${PWD}/../copy
+  echo "creating copy in ${PWD}/../copy"
+  mkdir ${PWD}/copy
   check_config ".bashrc"
   check_config ".bash_aliases"
+  check_config ".bash_scripts"
+  check_config ".bash_logout"
   fi
 }
 copy_item(){
   if [ -f ${HOME}/${1} ]; then
   echo "${HOME}/${1} copied"
-  cp $HOME/${1} $PWD/../copy/${1}
+  cp $HOME/${1} $PWD/copy/${1}
   else
   echo "$HOME/${1} not exists"
   fi
 }
 check_config(){
-if grep -qw "${1}=true" "$PWD/config"; then
+if grep -qw "${1}=true" "$PWD/scripts/config"; then
   echo "true configuration for [${1}]"
   copy_item "${1}"
-elif grep -qw "${1}=false" "$PWD/config"; then
+elif grep -qw "${1}=false" "$PWD/scripts/config"; then
   echo "false configuration for [${1}]"
 else
   echo "error configuration for [${1}]"

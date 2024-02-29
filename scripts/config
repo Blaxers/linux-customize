@@ -1,3 +1,5 @@
 #what copy
 .bashrc=true
 .bash_aliases=true
+.bash_scripts=true
+.bash_logout=true

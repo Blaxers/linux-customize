@@ -2,6 +2,9 @@
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+if [ -f ~/.bash_scripts ]; then
+    . ~/.bash_scripts
+fi
 #import logout if exists
 if [ -f ~/.bash_logout ]; then
     . ~/.bash_logout
