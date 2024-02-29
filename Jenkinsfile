@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('pull') {
       agent {
-        docker { image 'docker:git' }
+        docker { image 'docker:latest' }
       }
       steps {
         sh 'docker --version'
