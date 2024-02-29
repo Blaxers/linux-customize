@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'ls -lah'
                 bash 'cat /etc/os-release'
                 bash './main.sh'
                 bash 'whoami'
