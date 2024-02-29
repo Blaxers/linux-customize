@@ -6,11 +6,10 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'free --version'
-                sh 'ip --help'
+                sh 'ip -V'
                 sh 'top --help'
                 sh 'awk --help'
                 sh 'df --version'
-
             }
         }
     }
